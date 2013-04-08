@@ -19,6 +19,7 @@
 		86AFFCFE170AC56F0077D656 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AFFCFD170AC56F0077D656 /* ViewController.m */; };
 		86AFFD01170AC56F0077D656 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86AFFCFF170AC56F0077D656 /* ViewController_iPhone.xib */; };
 		86AFFD0D170AC7A20077D656 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AFFD0C170AC7A20077D656 /* TestObject.m */; };
+		86C0EEEA17116EE800345216 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 86C0EEE917116EE800345216 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		86AFFD00170AC56F0077D656 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		86AFFD0B170AC7A20077D656 /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
 		86AFFD0C170AC7A20077D656 /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
+		86C0EEE917116EE800345216 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C0EEEA17116EE800345216 /* libsqlite3.0.dylib in Frameworks */,
 				86AFFCE5170AC56F0077D656 /* UIKit.framework in Frameworks */,
 				86AFFCE7170AC56F0077D656 /* Foundation.framework in Frameworks */,
 				86AFFCE9170AC56F0077D656 /* CoreGraphics.framework in Frameworks */,
@@ -59,6 +62,7 @@
 		86AFFCD8170AC56E0077D656 = {
 			isa = PBXGroup;
 			children = (
+				86C0EEE917116EE800345216 /* libsqlite3.0.dylib */,
 				86AFFCEA170AC56F0077D656 /* DataStore */,
 				86AFFCE3170AC56F0077D656 /* Frameworks */,
 				86AFFCE2170AC56F0077D656 /* Products */,
@@ -314,6 +318,7 @@
 				86AFFD09170AC56F0077D656 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

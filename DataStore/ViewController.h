@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "/usr/include/sqlite3.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController 
 
 @property (nonatomic,readonly) NSString *fileName;
 - (IBAction)aButtonAction1:(id)sender;
 - (IBAction)aButtonAction2:(id)sender;
+
+- (IBAction)insertAction:(id)sender;
+- (IBAction)updateAction:(id)sender;
+- (IBAction)deleteAction:(id)sender;
 
 @end

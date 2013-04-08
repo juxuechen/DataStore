@@ -12,3 +12,15 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+
+#ifdef DEBUG
+#define DLOG(format, ...)   NSLog(format", file:%s, line:%d, function:%s.", ##__VA_ARGS__, __FILE__, __LINE__, __FUNCTION__)
+#define TRACE(format, ...)  NSLog(@"--- %s "format"---", __FUNCTION__, ##__VA_ARGS__)
+#else
+#define DLOG(format, ...)
+#define TRACE(format, ...)
+#endif
+
+#define KSDocumentPath()                [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
+
