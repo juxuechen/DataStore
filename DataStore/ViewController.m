@@ -203,8 +203,8 @@
         return;
     }
     
-    NSString * sqlCmd = [NSString stringWithFormat:@"insert into testDB (string, number) values ('%@', %d)",@"小荔枝",19];
-//    NSString * sqlCmd = [NSString stringWithFormat:@"insert into customer values (null, 'xiaolizhi', 28)"];
+//    NSString * sqlCmd = [NSString stringWithFormat:@"insert into testDB (string, number) values ('%@', %d)",@"小荔枝",19];
+    NSString * sqlCmd = [NSString stringWithFormat:@"insert into testDB values (null, 'xiaolizhi', 66)"];
     
     [self excuteSQL:sqlCmd];
     [self queryAllCustomers];
