@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ItemDetails" representedClassName="ItemDetails" syncable="YES">
+        <attribute name="intString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="info" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ItemInfo" inverseName="details" inverseEntity="ItemInfo" syncable="YES"/>
+    </entity>
+    <entity name="ItemInfo" representedClassName="ItemInfo" syncable="YES">
+        <attribute name="cdInt" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="details" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ItemDetails" inverseName="info" inverseEntity="ItemDetails" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ItemDetails" positionX="-4968" positionY="-871" width="128" height="73"/>
+        <element name="ItemInfo" positionX="-5220" positionY="-895" width="119" height="73"/>
+    </elements>
+</model>

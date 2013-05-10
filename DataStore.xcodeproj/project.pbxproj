@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		869CD148173CD189006E2682 /* ItemDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 869CD147173CD189006E2682 /* ItemDetails.m */; };
+		869CD14B173CD199006E2682 /* ItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 869CD14A173CD199006E2682 /* ItemInfo.m */; };
 		86AFFCE5170AC56F0077D656 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AFFCE4170AC56F0077D656 /* UIKit.framework */; };
 		86AFFCE7170AC56F0077D656 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AFFCE6170AC56F0077D656 /* Foundation.framework */; };
 		86AFFCE9170AC56F0077D656 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AFFCE8170AC56F0077D656 /* CoreGraphics.framework */; };
@@ -20,9 +22,15 @@
 		86AFFD01170AC56F0077D656 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86AFFCFF170AC56F0077D656 /* ViewController_iPhone.xib */; };
 		86AFFD0D170AC7A20077D656 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AFFD0C170AC7A20077D656 /* TestObject.m */; };
 		86C0EEEA17116EE800345216 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 86C0EEE917116EE800345216 /* libsqlite3.0.dylib */; };
+		86CB1C8C173B874400862804 /* CD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86CB1C8A173B874400862804 /* CD.xcdatamodeld */; };
+		86CB1C8E173BA93100862804 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CB1C8D173BA93100862804 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		869CD146173CD189006E2682 /* ItemDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemDetails.h; path = ../ItemDetails.h; sourceTree = "<group>"; };
+		869CD147173CD189006E2682 /* ItemDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemDetails.m; path = ../ItemDetails.m; sourceTree = "<group>"; };
+		869CD149173CD199006E2682 /* ItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemInfo.h; sourceTree = "<group>"; };
+		869CD14A173CD199006E2682 /* ItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemInfo.m; sourceTree = "<group>"; };
 		86AFFCE1170AC56F0077D656 /* DataStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86AFFCE4170AC56F0077D656 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86AFFCE6170AC56F0077D656 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,6 +50,8 @@
 		86AFFD0B170AC7A20077D656 /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
 		86AFFD0C170AC7A20077D656 /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
 		86C0EEE917116EE800345216 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		86CB1C8B173B874400862804 /* CD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CD.xcdatamodel; sourceTree = "<group>"; };
+		86CB1C8D173BA93100862804 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86CB1C8E173BA93100862804 /* CoreData.framework in Frameworks */,
 				86C0EEEA17116EE800345216 /* libsqlite3.0.dylib in Frameworks */,
 				86AFFCE5170AC56F0077D656 /* UIKit.framework in Frameworks */,
 				86AFFCE7170AC56F0077D656 /* Foundation.framework in Frameworks */,
@@ -62,7 +73,6 @@
 		86AFFCD8170AC56E0077D656 = {
 			isa = PBXGroup;
 			children = (
-				86C0EEE917116EE800345216 /* libsqlite3.0.dylib */,
 				86AFFCEA170AC56F0077D656 /* DataStore */,
 				86AFFCE3170AC56F0077D656 /* Frameworks */,
 				86AFFCE2170AC56F0077D656 /* Products */,
@@ -80,6 +90,8 @@
 		86AFFCE3170AC56F0077D656 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				86CB1C8D173BA93100862804 /* CoreData.framework */,
+				86C0EEE917116EE800345216 /* libsqlite3.0.dylib */,
 				86AFFCE4170AC56F0077D656 /* UIKit.framework */,
 				86AFFCE6170AC56F0077D656 /* Foundation.framework */,
 				86AFFCE8170AC56F0077D656 /* CoreGraphics.framework */,
@@ -97,6 +109,11 @@
 				86AFFCFF170AC56F0077D656 /* ViewController_iPhone.xib */,
 				86AFFD0A170AC7860077D656 /* archive */,
 				86AFFCEB170AC56F0077D656 /* Supporting Files */,
+				86CB1C8A173B874400862804 /* CD.xcdatamodeld */,
+				869CD149173CD199006E2682 /* ItemInfo.h */,
+				869CD14A173CD199006E2682 /* ItemInfo.m */,
+				869CD146173CD189006E2682 /* ItemDetails.h */,
+				869CD147173CD189006E2682 /* ItemDetails.m */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -194,6 +211,9 @@
 				86AFFCF5170AC56F0077D656 /* AppDelegate.m in Sources */,
 				86AFFCFE170AC56F0077D656 /* ViewController.m in Sources */,
 				86AFFD0D170AC7A20077D656 /* TestObject.m in Sources */,
+				86CB1C8C173B874400862804 /* CD.xcdatamodeld in Sources */,
+				869CD148173CD189006E2682 /* ItemDetails.m in Sources */,
+				869CD14B173CD199006E2682 /* ItemInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +341,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		86CB1C8A173B874400862804 /* CD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				86CB1C8B173B874400862804 /* CD.xcdatamodel */,
+			);
+			currentVersion = 86CB1C8B173B874400862804 /* CD.xcdatamodel */;
+			path = CD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 86AFFCD9170AC56F0077D656 /* Project object */;
 }

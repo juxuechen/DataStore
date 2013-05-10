@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 #import "TestObject.h"
+#import <CoreData/CoreData.h>
+#import "AppDelegate.h"
+#import "ItemInfo.h"
+#import "ItemDetails.h"
 
 @interface ViewController ()
 {
@@ -232,6 +236,46 @@
     
     [self excuteSQL:sqlCmd];
     [self queryAllCustomers];
+}
+
+
+
+- (IBAction)cdIndesert:(id)sender {
+    NSInteger i = [[[NSUserDefaults standardUserDefaults] valueForKey:@"int"] integerValue];
+     [[NSUserDefaults standardUserDefaults] setInteger:i++ forKey:@"int"];
+    
+    NSManagedObjectContext *context = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+    ItemInfo *info = [NSEntityDescription insertNewObjectForEntityForName:@"ItemInfo" inManagedObjectContext:context];
+    info.cdInt = [NSNumber numberWithInteger:i];
+    ItemDetails *details = [NSEntityDescription insertNewObjectForEntityForName:@"ItemDetails" inManagedObjectContext:context];
+    details.intString = [NSString stringWithFormat:@"string-%d-int-%d",i,i];
+    info.details = details;
+    details.info = info;
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+    
+    //创建一个叫做fetch request的新方法，你可以将一个fetch request看做Sql中的select语句
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"ItemInfo" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    //调用executeFetchRequest方法，将FailedBankInfo表中的所有数据推入一个数据缓存中
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (ItemInfo *info in fetchedObjects) {
+        NSLog(@"ItemInfo->cdInt: %@", info.cdInt);
+        ItemDetails *details = info.details;
+        NSLog(@"ItemDetails->intString: %@", details.intString);
+    }
+}
+
+- (IBAction)cdUpdate:(id)sender {
+}
+
+- (IBAction)cdDelete:(id)sender {
 }
 
 @end
