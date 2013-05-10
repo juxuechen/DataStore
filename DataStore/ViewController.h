@@ -19,6 +19,7 @@
 - (IBAction)updateAction:(id)sender;
 - (IBAction)deleteAction:(id)sender;
 
+- (IBAction)query:(id)sender;
 - (IBAction)cdIndesert:(id)sender;
 - (IBAction)cdUpdate:(id)sender;
 - (IBAction)cdDelete:(id)sender;
